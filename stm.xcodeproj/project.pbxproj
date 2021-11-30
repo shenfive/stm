@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 55;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -83,6 +83,8 @@
 		BA3B82A4273B75B700529E52 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		BA3B82A7273B75B700529E52 /* BroadcastSetupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BroadcastSetupViewController.swift; sourceTree = "<group>"; };
 		BA3B82A9273B75B700529E52 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BACDEAFF273D2021008E2F9B /* BroacastUploader.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BroacastUploader.entitlements; sourceTree = "<group>"; };
+		BACDEB00273D204F008E2F9B /* stm.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = stm.entitlements; sourceTree = "<group>"; };
 		CCB6FDE02092B4CE6B8F6017 /* Pods-stm.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-stm.debug.xcconfig"; path = "Target Support Files/Pods-stm/Pods-stm.debug.xcconfig"; sourceTree = "<group>"; };
 		E9C326B83415726032305119 /* Pods-BroacastUploader.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BroacastUploader.release.xcconfig"; path = "Target Support Files/Pods-BroacastUploader/Pods-BroacastUploader.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -128,7 +130,6 @@
 				CCB6FDE02092B4CE6B8F6017 /* Pods-stm.debug.xcconfig */,
 				807F47AD4956AB8797124014 /* Pods-stm.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -157,6 +158,7 @@
 		BA3B827D273B759400529E52 /* stm */ = {
 			isa = PBXGroup;
 			children = (
+				BACDEB00273D204F008E2F9B /* stm.entitlements */,
 				BA3B827E273B759400529E52 /* AppDelegate.swift */,
 				BA3B8280273B759400529E52 /* SceneDelegate.swift */,
 				BA3B8282273B759400529E52 /* ViewController.swift */,
@@ -183,6 +185,7 @@
 		BA3B829A273B75B700529E52 /* BroacastUploader */ = {
 			isa = PBXGroup;
 			children = (
+				BACDEAFF273D2021008E2F9B /* BroacastUploader.entitlements */,
 				BA3B829B273B75B700529E52 /* SampleHandler.swift */,
 				BA3B829D273B75B700529E52 /* Info.plist */,
 			);
@@ -282,7 +285,7 @@
 				};
 			};
 			buildConfigurationList = BA3B8276273B759400529E52 /* Build configuration list for PBXProject "stm" */;
-			compatibilityVersion = "Xcode 13.0";
+			compatibilityVersion = "Xcode 12.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -600,11 +603,16 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = stm/stm.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 7GDS98WL3H;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = stm/Info.plist;
+				INFOPLIST_KEY_NSAppleMusicUsageDescription = "App需要您的同意,才能访问媒体资料库";
+				INFOPLIST_KEY_NSCameraUsageDescription = "App需要您的同意,才能访问相机";
+				INFOPLIST_KEY_NSDocumentsFolderUsageDescription = "App 需要你的同意，才能讀取檔案";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "App需要您的同意,才能访问麦克风";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -630,11 +638,16 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = stm/stm.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 7GDS98WL3H;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = stm/Info.plist;
+				INFOPLIST_KEY_NSAppleMusicUsageDescription = "App需要您的同意,才能访问媒体资料库";
+				INFOPLIST_KEY_NSCameraUsageDescription = "App需要您的同意,才能访问相机";
+				INFOPLIST_KEY_NSDocumentsFolderUsageDescription = "App 需要你的同意，才能讀取檔案";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "App需要您的同意,才能访问麦克风";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -709,6 +722,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 4582E78D0EC8090C7B9CE386 /* Pods-BroacastUploader.debug.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = BroacastUploader/BroacastUploader.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 7GDS98WL3H;
@@ -735,6 +749,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E9C326B83415726032305119 /* Pods-BroacastUploader.release.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = BroacastUploader/BroacastUploader.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 7GDS98WL3H;

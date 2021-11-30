@@ -29,13 +29,21 @@ open class SampleHandler: RPBroadcastSampleHandler {
     }
 
     override open func broadcastStarted(withSetupInfo setupInfo: [String: NSObject]?) {
+        //TODO: 這兒應該由原 APP 取得一些相關資訊，如伺服器位置等，但這事要建立 appGroup 操作不只是一點麻煩，暫時不作
         rtmpConnection.connect(Preference.defaultInstance.uri!, arguments: nil)
     }
 
+    open override func broadcastFinished() {
+        //TODO: 這兒應該回到原APP，但這事要建立 appGroup 操作不只是一點麻煩，暫時不作
+        
+        print("Finished")
+    }
+    
+    
+    
     override open func processSampleBuffer(_ sampleBuffer: CMSampleBuffer, with sampleBufferType: RPSampleBufferType) {
         switch sampleBufferType {
         case .video:
-            print("video")
             if let description = CMSampleBufferGetFormatDescription(sampleBuffer) {
                 let dimensions = CMVideoFormatDescriptionGetDimensions(description)
                 rtmpStream.videoSettings = [
@@ -75,7 +83,7 @@ open class SampleHandler: RPBroadcastSampleHandler {
         }
         switch code {
         case RTMPConnection.Code.connectSuccess.rawValue:
-            rtmpStream.publish(Preference.defaultInstance.streamName!)
+            rtmpStream.publish(Preference.defaultInstance.streamKey!)
         default:
             break
         }
@@ -84,5 +92,5 @@ open class SampleHandler: RPBroadcastSampleHandler {
 struct Preference {
     static var defaultInstance = Preference()
     var uri: String? = "rtmp://a.rtmp.youtube.com/live2"
-    var streamName: String? = "d30a-5uxg-63zp-7595-fh2r"
+    var streamKey: String? = "d30a-5uxg-63zp-7595-fh2r"
 }

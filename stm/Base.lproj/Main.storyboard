@@ -17,22 +17,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fcu-Bz-u5x">
-                                <rect key="frame" x="295" y="124" width="67" height="44"/>
-                                <color key="backgroundColor" red="1" green="0.79743028569999996" blue="0.51828189810000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="CVC-9A-4qW"/>
-                                    <constraint firstAttribute="width" constant="67" id="hZW-lU-c4y"/>
-                                </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="內用按鍵"/>
-                                <connections>
-                                    <action selector="actionOne:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BNc-gc-M4N"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tPt-kR-rNv">
-                                <rect key="frame" x="69" y="231" width="150" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="按下方按鈕進行直播" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tPt-kR-rNv">
+                                <rect key="frame" x="60" y="88" width="156" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -41,8 +27,8 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="fcu-Bz-u5x" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="80" id="lMb-1h-WiB"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fcu-Bz-u5x" secondAttribute="trailing" constant="52" id="qqa-QT-nbB"/>
+                            <constraint firstItem="tPt-kR-rNv" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="44" id="V4I-cY-6ev"/>
+                            <constraint firstItem="tPt-kR-rNv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="60" id="sRh-9L-6zD"/>
                         </constraints>
                     </view>
                     <connections>
